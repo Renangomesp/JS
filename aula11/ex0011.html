@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>resultado</h1>
+    sua nacionalidade e <input type="text" id="txtp">
+    <input type="button" value="verificar" onclick="descobrir()">
+    <div id="res"></div>
+
+    <script>
+        function descobrir(){
+            var txta = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var ax = (txta.value)
+            res.innerHTML = `<p>sua nacionalidade ${ax}</p>`
+            if (ax == `Brasil`){
+                res.innerHTML = `<p>voce e <strong>BRASILEIRO</strong></p>`
+            } else {
+                res.innerHTML = `<p>voce e <strong>ESTRANGEIRO</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
